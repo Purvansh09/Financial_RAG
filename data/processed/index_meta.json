@@ -1,0 +1,6 @@
+{
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "dim": 384,
+  "n_chunks": 3935,
+  "chunks_sha256": "4f30e49bb69ba8ac26412f2aec196cb14c73bcd97550264fb312af2a835e0ce7"
+}

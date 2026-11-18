@@ -1,0 +1,1701 @@
+{
+  "label": "baseline",
+  "timestamp": "20261027-114435",
+  "settings": {
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "chunk_size": 500,
+    "chunk_overlap": 75,
+    "top_k": 5,
+    "n_chunks": 3935,
+    "llm_model": "claude-opus-5-5",
+    "llm_effort": "medium",
+    "judge_model": "claude-opus-5-5"
+  },
+  "overall": {
+    "n": 38,
+    "n_answerable": 32,
+    "hit@1": 15.6,
+    "hit@3": 40.6,
+    "hit@5": 53.1,
+    "hit@10": 65.6,
+    "mrr@10": 0.31,
+    "correct": 53.1,
+    "correct_or_partial": 56.2,
+    "faithful": 95.5,
+    "figures_grounded": 95.5,
+    "cites_gold": 77.3,
+    "unanswerable_declined": 100.0,
+    "answers_with_warnings": 5.3
+  },
+  "by_type": {
+    "cross_year": {
+      "n": 4,
+      "n_answerable": 4,
+      "hit@1": 25.0,
+      "hit@3": 50.0,
+      "hit@5": 75.0,
+      "hit@10": 100.0,
+      "mrr@10": 0.408,
+      "correct": 75.0,
+      "correct_or_partial": 75.0,
+      "faithful": 100.0,
+      "figures_grounded": 75.0,
+      "cites_gold": 75.0,
+      "unanswerable_declined": null,
+      "answers_with_warnings": 25.0
+    },
+    "earnings_call": {
+      "n": 8,
+      "n_answerable": 8,
+      "hit@1": 25.0,
+      "hit@3": 62.5,
+      "hit@5": 62.5,
+      "hit@10": 62.5,
+      "mrr@10": 0.438,
+      "correct": 50.0,
+      "correct_or_partial": 62.5,
+      "faithful": 100.0,
+      "figures_grounded": 100.0,
+      "cites_gold": 100.0,
+      "unanswerable_declined": null,
+      "answers_with_warnings": 0.0
+    },
+    "fact": {
+      "n": 10,
+      "n_answerable": 10,
+      "hit@1": 0.0,
+      "hit@3": 10.0,
+      "hit@5": 40.0,
+      "hit@10": 50.0,
+      "mrr@10": 0.134,
+      "correct": 40.0,
+      "correct_or_partial": 40.0,
+      "faithful": 100.0,
+      "figures_grounded": 100.0,
+      "cites_gold": 66.7,
+      "unanswerable_declined": null,
+      "answers_with_warnings": 10.0
+    },
+    "table": {
+      "n": 10,
+      "n_answerable": 10,
+      "hit@1": 20.0,
+      "hit@3": 50.0,
+      "hit@5": 50.0,
+      "hit@10": 70.0,
+      "mrr@10": 0.344,
+      "correct": 60.0,
+      "correct_or_partial": 60.0,
+      "faithful": 85.7,
+      "figures_grounded": 100.0,
+      "cites_gold": 71.4,
+      "unanswerable_declined": null,
+      "answers_with_warnings": 0.0
+    },
+    "unanswerable": {
+      "n": 6,
+      "n_answerable": 0,
+      "hit@1": null,
+      "hit@3": null,
+      "hit@5": null,
+      "hit@10": null,
+      "mrr@10": null,
+      "correct": null,
+      "correct_or_partial": null,
+      "faithful": null,
+      "figures_grounded": null,
+      "cites_gold": null,
+      "unanswerable_declined": 100.0,
+      "answers_with_warnings": 0.0
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "type": "table",
+      "question": "How much Scope 1 greenhouse gas emissions did HDFC Bank report for FY2024-25?",
+      "gold_answer": "77,999.50 tCO2e",
+      "gold_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.120",
+        "hdfcbank_fy25_annual_report.pdf p.558"
+      ],
+      "gold_rank": 6,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.119",
+        "hdfcbank_fy25_annual_report.pdf p.121",
+        "hdfcbank_fy25_annual_report.pdf p.6",
+        "hdfcbank_fy25_annual_report.pdf p.559",
+        "hdfcbank_fy25_annual_report.pdf p.118",
+        "hdfcbank_fy25_annual_report.pdf p.558",
+        "hdfcbank_fy25_annual_report.pdf p.559",
+        "tcs_fy26_annual_report.pdf p.136",
+        "hdfcbank_fy25_annual_report.pdf p.120",
+        "infosys_fy25_annual_report.pdf p.165"
+      ],
+      "latency_s": 6.1,
+      "answer": "HDFC Bank reported **0.078 million tCO2e** of Scope 1 emissions for FY 2024-25, down from 0.084 million tCO2e in FY 2023-24 [5]. The source does not say whether this figure is standalone or consolidated.\n\nThe Bank gives two main reasons for the decline: a gradual switch from high-GHG hydrofluorocarbon fire extinguishers to low-GHG fluoroketone ones, and routine upgrades to energy-efficient equipment [5][4].\n\nScope 1 covers company-owned vehicles, company-owned diesel generator sets, and fugitive emissions from air conditioners and fire extinguishers [4][5]. SGS India Private Limited carried out an independent reasonable assurance of the FY 2024-25 indicators [4].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.118",
+        "hdfcbank_fy25_annual_report.pdf p.559"
+      ],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4842,
+        "output_tokens": 440
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer's 0.078 million tCO2e is a rounded form of the reference 77,999.50 tCO2e, and every other claim (the prior-year 0.084 figure, the reasons for the decline, the Scope 1 coverage and the SGS assurance) is supported by passages 4 and 5.",
+      "judge_usage": {
+        "input_tokens": 5305,
+        "output_tokens": 276
+      },
+      "faithful": true
+    },
+    {
+      "id": "q02",
+      "type": "table",
+      "question": "How much did HDFC Bank technically or prudentially write off during FY2025?",
+      "gold_answer": "₹10,054.32 crore",
+      "gold_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.360",
+        "hdfcbank_fy25_annual_report.pdf p.362"
+      ],
+      "gold_rank": 1,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.362",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.33",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.32",
+        "hdfcbank_fy25_annual_report.pdf p.349",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.17",
+        "hdfcbank_fy25_annual_report.pdf p.329",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.6",
+        "hdfcbank_fy25_annual_report.pdf p.455",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.29",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.4"
+      ],
+      "latency_s": 5.8,
+      "answer": "During the year ended March 31, 2025, HDFC Bank's technical / prudential write-offs were **₹10,054.32 crore**, up from ₹9,343.08 crore in the previous year [1].\n\n- **Stock of written-off accounts:** It rose from an opening balance of ₹42,661.39 crore to a closing balance of ₹46,799.43 crore at March 31, 2025 [1].\n- **Reductions during the year:** These were recoveries of ₹3,079.42 crore and sacrifices of ₹2,836.86 crore from accounts written off earlier [1].\n- **Nature of technical write-offs:** The bank writes these loans off only for accounting purposes, without waiving any claim against the borrower [1].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.362"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3093,
+        "output_tokens": 349
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer states the reference figure of ₹10,054.32 crore, and every supporting detail (prior-year figure, opening and closing balances, recoveries, sacrifices, and the nature of technical write-offs) matches passage 1.",
+      "judge_usage": {
+        "input_tokens": 3536,
+        "output_tokens": 204
+      },
+      "faithful": true
+    },
+    {
+      "id": "q03",
+      "type": "fact",
+      "question": "How many fraud cases did HDFC Bank report in FY2025, and how much money was involved?",
+      "gold_answer": "39,893 cases involving ₹801.24 crore",
+      "gold_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.368"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.300",
+        "hdfcbank_fy25_annual_report.pdf p.271",
+        "hdfcbank_fy25_annual_report.pdf p.266",
+        "hdfcbank_fy25_annual_report.pdf p.245",
+        "hdfcbank_fy25_annual_report.pdf p.269",
+        "hdfcbank_fy25_annual_report.pdf p.50",
+        "hdfcbank_fy25_annual_report.pdf p.241",
+        "hdfcbank_fy25_annual_report.pdf p.6",
+        "hdfcbank_fy25_annual_report.pdf p.537",
+        "hdfcbank_fy25_annual_report.pdf p.381"
+      ],
+      "latency_s": 4.4,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4999,
+        "output_tokens": 252
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q04",
+      "type": "table",
+      "question": "On a consolidated basis, how much were the tax claims against HDFC Bank that it did not acknowledge as debts at March 31, 2025?",
+      "gold_answer": "₹6,737.94 crore",
+      "gold_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.452"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.501",
+        "hdfcbank_fy25_annual_report.pdf p.365",
+        "hdfcbank_fy25_annual_report.pdf p.441",
+        "hdfcbank_fy25_annual_report.pdf p.403",
+        "hdfcbank_fy25_annual_report.pdf p.371",
+        "hdfcbank_fy25_annual_report.pdf p.413",
+        "hdfcbank_fy25_annual_report.pdf p.407",
+        "hdfcbank_fy25_annual_report.pdf p.511",
+        "hdfcbank_fy25_annual_report.pdf p.455",
+        "hdfcbank_fy25_annual_report.pdf p.5"
+      ],
+      "latency_s": 2.5,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4747,
+        "output_tokens": 131
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q05",
+      "type": "fact",
+      "question": "By when does HDFC Bank aim to become carbon neutral?",
+      "gold_answer": "By FY32 (2031-32)",
+      "gold_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.37",
+        "hdfcbank_fy25_annual_report.pdf p.533",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.28"
+      ],
+      "gold_rank": 5,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.121",
+        "hdfcbank_fy25_annual_report.pdf p.69",
+        "hdfcbank_fy25_annual_report.pdf p.523",
+        "hdfcbank_fy25_annual_report.pdf p.559",
+        "hdfcbank_fy25_annual_report.pdf p.533",
+        "hdfcbank_fy25_annual_report.pdf p.60",
+        "hdfcbank_fy25_annual_report.pdf p.123",
+        "hdfcbank_fy25_annual_report.pdf p.129",
+        "hdfcbank_fy25_annual_report.pdf p.329",
+        "hdfcbank_fy25_annual_report.pdf p.71"
+      ],
+      "latency_s": 3.7,
+      "answer": "HDFC Bank aims to become **carbon neutral by FY 2031-32 (FY32)** [1][2][5].\n\n- **Scope:** The target covers its Scope 1 and Scope 2 emissions, which the bank describes as carbon neutrality in its own operations [1][2].\n- **When it was set:** The goal was set in FY 2020-21 [1].\n- **Baseline change:** After the merger with erstwhile HDFC Limited expanded its operational boundaries, the bank recalibrated its baseline and made FY 2023-24 the new base year [1]. The FY 2031-32 target date remains unchanged, but the bank is reviewing its interim milestones [1].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "hdfcbank_fy25_annual_report.pdf p.121",
+        "hdfcbank_fy25_annual_report.pdf p.69",
+        "hdfcbank_fy25_annual_report.pdf p.533"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4033,
+        "output_tokens": 290
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly states FY32 (FY 2031-32), matching the reference, and every added detail is backed by the passages: the Scope 1/2 coverage, being set in FY 2020-21, the FY 2023-24 baseline recalibration after the merger, and the review of interim milestones.",
+      "judge_usage": {
+        "input_tokens": 4455,
+        "output_tokens": 122
+      },
+      "faithful": true
+    },
+    {
+      "id": "q06",
+      "type": "table",
+      "question": "What share of HDFC Bank's total consolidated outstanding exposure was to consumer loans?",
+      "gold_answer": "31.1% (₹10,068 bn)",
+      "gold_pages": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.34"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.35",
+        "hdfcbank_fy25_annual_report.pdf p.371",
+        "hdfcbank_fy25_annual_report.pdf p.373",
+        "hdfcbank_fy25_annual_report.pdf p.455",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.30",
+        "hdfcbank_fy25_annual_report.pdf p.48",
+        "hdfcbank_fy25_annual_report.pdf p.211",
+        "hdfcbank_fy25_annual_report.pdf p.42",
+        "hdfcbank_fy25_annual_report.pdf p.84",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.21"
+      ],
+      "latency_s": 2.7,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3770,
+        "output_tokens": 128
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q07",
+      "type": "fact",
+      "question": "In which year did ICICI Bank register its 'Go Green' trademark?",
+      "gold_answer": "2010",
+      "gold_pages": [
+        "icicibank_fy25_integrated_report.pdf p.58"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "icicibank_fy25_integrated_report.pdf p.1",
+        "icicibank_fy25_integrated_report.pdf p.1",
+        "icicibank_q4fy25_earnings_call.pdf p.9",
+        "hdfcbank_fy25_annual_report.pdf p.539",
+        "icicibank_fy25_financial_statements.pdf p.144",
+        "icicibank_fy25_financial_statements.pdf p.132",
+        "hdfcbank_fy25_annual_report.pdf p.117",
+        "icicibank_fy25_integrated_report.pdf p.20",
+        "icicibank_fy25_financial_statements.pdf p.198",
+        "icicibank_fy25_financial_statements.pdf p.166"
+      ],
+      "latency_s": 1.4,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3906,
+        "output_tokens": 10
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q08",
+      "type": "fact",
+      "question": "What dedicated team did ICICI Bank set up to embed sustainability in its business, and what is it responsible for?",
+      "gold_answer": "A dedicated climate risk team, responsible for policy and framework development, risk identification and assessment, data and metrics, and capacity building",
+      "gold_pages": [
+        "icicibank_fy25_integrated_report.pdf p.59"
+      ],
+      "gold_rank": 4,
+      "retrieved": [
+        "icicibank_fy25_integrated_report.pdf p.7",
+        "icicibank_fy25_integrated_report.pdf p.5",
+        "icicibank_fy25_integrated_report.pdf p.54",
+        "icicibank_fy25_integrated_report.pdf p.59",
+        "icicibank_fy25_integrated_report.pdf p.55",
+        "icicibank_fy25_financial_statements.pdf p.144",
+        "icicibank_fy25_integrated_report.pdf p.11",
+        "icicibank_fy25_integrated_report.pdf p.26",
+        "hdfcbank_fy25_annual_report.pdf p.111",
+        "icicibank_fy25_integrated_report.pdf p.49"
+      ],
+      "latency_s": 3.1,
+      "answer": "ICICI Bank set up a **dedicated climate risk team** to embed sustainability in its business activities [4].\n\nThe team is responsible for:\n- **Policy and framework development** [4]\n- **Risk identification and assessment** [4]\n- **Data and metrics** [4]\n- **Capacity building** [4]\n\nIt works closely with the Bank's ESG team and helps it engage with external stakeholders such as regulators and rating agencies [4]. More detail on the Bank's environmental risk management is in its ESG Report for fiscal 2025 [4].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_fy25_integrated_report.pdf p.59"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 5022,
+        "output_tokens": 265
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly identifies the dedicated climate risk team and all four responsibilities, and every additional detail it gives is supported by passage 4.",
+      "judge_usage": {
+        "input_tokens": 5424,
+        "output_tokens": 74
+      },
+      "faithful": true
+    },
+    {
+      "id": "q09",
+      "type": "table",
+      "question": "What was ICICI Bank's gross NPA ratio on priority-sector agriculture advances at March 31, 2025?",
+      "gold_answer": "4.53%",
+      "gold_pages": [
+        "icicibank_fy25_financial_statements.pdf p.69"
+      ],
+      "gold_rank": 3,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.61",
+        "icicibank_fy25_financial_statements.pdf p.70",
+        "icicibank_fy25_financial_statements.pdf p.69",
+        "icicibank_fy25_financial_statements.pdf p.186",
+        "icicibank_fy25_financial_statements.pdf p.182",
+        "icicibank_fy25_financial_statements.pdf p.81",
+        "icicibank_fy25_financial_statements.pdf p.130",
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.83",
+        "icicibank_fy25_financial_statements.pdf p.62"
+      ],
+      "latency_s": 2.9,
+      "answer": "ICICI Bank's gross NPAs on **priority-sector \"Agriculture and allied activities\"** advances were **4.53%** of total advances in that sector at March 31, 2025, on a standalone basis [3]. That reflects gross NPAs of ₹ 43,656.6 million against outstanding advances of ₹ 964,623.8 million [3].\n\nThis was up from 4.33% at March 31, 2024, when gross NPAs were ₹ 35,889.6 million on outstanding advances of ₹ 829,107.0 million [2].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_fy25_financial_statements.pdf p.69",
+        "icicibank_fy25_financial_statements.pdf p.70"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4579,
+        "output_tokens": 272
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer states 4.53%, matching the reference, and its supporting figures for March 31, 2025 and 2024 all appear in passages 3 and 2.",
+      "judge_usage": {
+        "input_tokens": 4944,
+        "output_tokens": 78
+      },
+      "faithful": true
+    },
+    {
+      "id": "q10",
+      "type": "table",
+      "question": "What percentage of ICICI Bank's gross NPAs did its 20 largest NPA accounts make up at March 31, 2025?",
+      "gold_answer": "25.8% (down from 34.4% a year earlier)",
+      "gold_pages": [
+        "icicibank_fy25_financial_statements.pdf p.69"
+      ],
+      "gold_rank": 2,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.61",
+        "icicibank_fy25_financial_statements.pdf p.69",
+        "icicibank_fy25_financial_statements.pdf p.11",
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.83",
+        "icicibank_fy25_financial_statements.pdf p.186",
+        "icicibank_fy25_financial_statements.pdf p.86",
+        "icicibank_fy25_financial_statements.pdf p.68",
+        "icicibank_fy25_financial_statements.pdf p.187"
+      ],
+      "latency_s": 3.9,
+      "answer": "At March 31, 2025, exposure to ICICI Bank's 20 largest NPA accounts was **25.8%** of total gross NPAs, down from 34.4% at March 31, 2024, on a standalone basis [2]. Total exposure to the top 20 NPA accounts was ₹74,614.4 million, compared with ₹115,431.9 million a year earlier [2].\n\nBoth figures measure credit exposure, funded and non-funded, including derivatives and investment exposures as defined by RBI exposure norms, not just loan balances [2].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_fy25_financial_statements.pdf p.69"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4557,
+        "output_tokens": 302
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer gives 25.8% (down from 34.4%), matching the reference, and every additional detail, including the exposure amounts, the standalone basis and the exposure definition, is supported by passage 2.",
+      "judge_usage": {
+        "input_tokens": 4936,
+        "output_tokens": 274
+      },
+      "faithful": true
+    },
+    {
+      "id": "q11",
+      "type": "table",
+      "question": "How much cash in hand did the ICICI Bank group hold at March 31, 2025?",
+      "gold_answer": "₹64,936,822 thousand",
+      "gold_pages": [
+        "icicibank_fy25_financial_statements.pdf p.137"
+      ],
+      "gold_rank": 9,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.186",
+        "icicibank_fy25_financial_statements.pdf p.132",
+        "icicibank_fy25_financial_statements.pdf p.11",
+        "icicibank_fy25_financial_statements.pdf p.97",
+        "icicibank_fy25_financial_statements.pdf p.14",
+        "icicibank_fy25_financial_statements.pdf p.184",
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.137",
+        "icicibank_fy25_financial_statements.pdf p.182"
+      ],
+      "latency_s": 4.7,
+      "answer": "**The sources do not give a separate cash-in-hand figure for the ICICI Bank group at March 31, 2025.** They only report it combined with other balances:\n\n- **Consolidated \"Cash and balances with Reserve Bank of India\":** ₹1,202,409,132 thousand at 31.03.2025, up from ₹899,430,231 thousand at 31.03.2024 [1]. The split between cash in hand and RBI balances would be in Schedule 6, which is not included in the sources.\n- **Consolidated cash and cash equivalents:** ₹2,140,234,637 thousand at the end of FY2025 [3]. This also includes foreign currency notes, rupee digital currency, balances with RBI, balances with other banks, and money at call and short notice [3].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.132"
+      ],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4355,
+        "output_tokens": 418
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [
+        "The split between cash in hand and RBI balances would be in Schedule 6, which is not included in the sources."
+      ],
+      "reason": "The system answer says no separate cash-in-hand figure is available and never gives the reference value of ₹64,936,822 thousand, so it is incorrect; the two combined figures it cites do appear in the passages, but the claim that the split is in Schedule 6 is not stated anywhere in them.",
+      "judge_usage": {
+        "input_tokens": 4799,
+        "output_tokens": 156
+      },
+      "faithful": false
+    },
+    {
+      "id": "q12",
+      "type": "fact",
+      "question": "How much remuneration did ICICI Bank's whole-time directors receive in FY2025?",
+      "gold_answer": "₹365.1 million",
+      "gold_pages": [
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.90"
+      ],
+      "gold_rank": 7,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.104",
+        "hdfcbank_fy25_annual_report.pdf p.264",
+        "icicibank_fy25_financial_statements.pdf p.104",
+        "icicibank_fy25_financial_statements.pdf p.99",
+        "icicibank_fy25_financial_statements.pdf p.103",
+        "hdfcbank_fy25_annual_report.pdf p.293",
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.94",
+        "icicibank_fy25_financial_statements.pdf p.12",
+        "icicibank_fy25_financial_statements.pdf p.198"
+      ],
+      "latency_s": 9.1,
+      "answer": "**The sources do not state how much remuneration ICICI Bank's whole-time directors (WTDs) received in FY2025.** They contain only related figures:\n\n- **Deviation from mean pay (standalone, FY2025):** The mean pay for the bank as a whole, excluding sub-staff, was ₹947,692 [5]. The MD & CEO's pay deviated from this mean by ₹70,251,566 [5]. The rows for WTD1, WTD2 and WTD3 are cut off in the extract, so their deviations are not available [5]. Mean pay is based on annualised fixed pay (basic salary, allowances, provident fund, gratuity, superannuation, perquisites and similar items) [1].\n- **Aggregate remuneration awards (FY2025):** The same disclosure reports fixed remuneration of ₹979.5 million and variable remuneration of ₹447.9 million (₹221.5 million deferred and ₹226.4 million non-deferred) [5]. It also reports 2,861,890 deferred share-linked instruments [5]. These totals appear to cover all 34 material risk takers identified, a group that includes the MD & CEO, WTDs and other material risk takers [5][1]. They are therefore not a figure for WTDs alone.\n\nThe sources also disclose remuneration paid to non-executive directors and the part-time chairman, but not to WTDs [3].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_fy25_financial_statements.pdf p.103",
+        "icicibank_fy25_financial_statements.pdf p.104",
+        "icicibank_fy25_financial_statements.pdf p.104"
+      ],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4773,
+        "output_tokens": 878
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "The system answer says the sources do not state whole-time director remuneration and gives no figure matching the reference of ₹365.1 million; its cited figures are, however, supported by the passages.",
+      "judge_usage": {
+        "input_tokens": 5418,
+        "output_tokens": 318
+      },
+      "faithful": true
+    },
+    {
+      "id": "q13",
+      "type": "fact",
+      "question": "Which global engineering firm is featured in Infosys's FY2025 report as a partner for scaling generative AI across its business?",
+      "gold_answer": "Hatch",
+      "gold_pages": [
+        "infosys_fy25_annual_report.pdf p.7"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "infosys_fy26_annual_report.pdf p.18",
+        "infosys_fy26_annual_report.pdf p.75",
+        "infosys_fy25_annual_report.pdf p.21",
+        "infosys_fy25_annual_report.pdf p.18",
+        "infosys_fy25_annual_report.pdf p.72",
+        "infosys_fy26_annual_report.pdf p.23",
+        "infosys_fy26_annual_report.pdf p.10",
+        "infosys_fy26_annual_report.pdf p.39",
+        "infosys_fy25_annual_report.pdf p.37",
+        "infosys_fy25_annual_report.pdf p.3"
+      ],
+      "latency_s": 1.8,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4865,
+        "output_tokens": 42
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q14",
+      "type": "fact",
+      "question": "What was Infosys's prescribed CSR obligation (2% of average net profit) for FY2025?",
+      "gold_answer": "₹539.85 crore",
+      "gold_pages": [
+        "infosys_fy25_annual_report.pdf p.64"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.97",
+        "infosys_fy25_annual_report.pdf p.264",
+        "infosys_fy25_annual_report.pdf p.347",
+        "infosys_fy26_annual_report.pdf p.63",
+        "infosys_fy25_annual_report.pdf p.41",
+        "infosys_fy25_annual_report.pdf p.61",
+        "infosys_fy26_annual_report.pdf p.105",
+        "infosys_fy25_annual_report.pdf p.11",
+        "infosys_fy25_annual_report.pdf p.47",
+        "infosys_fy25_annual_report.pdf p.16"
+      ],
+      "latency_s": 5.6,
+      "answer": "**The sources do not state the prescribed CSR obligation for FY2025.** They give related figures only:\n\n- **Policy:** The CSR Committee says it allocates at least 2% of the average net profits of the Company from the three preceding financial years to CSR activities in India [1].\n- **Amount spent:** Infosys spent ₹523.70 crore on various projects in fiscal 2025 [1].\n- **Unspent balance:** ₹16.15 crore is unspent. It relates to ongoing projects and will go to the unspent CSR account [1].\n- **Earlier years' projects:** Infosys also spent ₹46.26 crore on ongoing projects from fiscals 2022, 2023 and 2024 [1].\n- **Spending outside India:** ₹40 crore was spent outside India in fiscal 2025, which is above the statutory requirement in India [1].\n\nThe full CSR report with the detailed obligation is said to be in Annexure 6 to the Board's report, but that section is not among the sources provided [1].",
+      "not_found": false,
+      "warnings": [
+        "1 sentence(s) state figures without a citation."
+      ],
+      "cited_pages": [
+        "infosys_fy25_annual_report.pdf p.97"
+      ],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4711,
+        "output_tokens": 497
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "The answer says the obligation is not stated and never gives ₹539.85 crore, even though the passages provide the ₹523.70 crore spent and the ₹16.15 crore unspent, which add up to that figure; all of its individual claims are supported by passage 1.",
+      "judge_usage": {
+        "input_tokens": 5237,
+        "output_tokens": 330
+      },
+      "faithful": true
+    },
+    {
+      "id": "q15",
+      "type": "table",
+      "question": "How much construction and demolition waste did Infosys generate in fiscal 2025?",
+      "gold_answer": "982.84 metric tonnes",
+      "gold_pages": [
+        "infosys_fy25_annual_report.pdf p.166",
+        "infosys_fy26_annual_report.pdf p.176"
+      ],
+      "gold_rank": 1,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.166",
+        "infosys_fy26_annual_report.pdf p.176",
+        "infosys_fy26_annual_report.pdf p.177",
+        "infosys_fy25_annual_report.pdf p.167",
+        "infosys_fy25_annual_report.pdf p.214",
+        "infosys_fy25_annual_report.pdf p.75",
+        "infosys_fy25_annual_report.pdf p.275",
+        "infosys_fy25_annual_report.pdf p.197",
+        "infosys_fy26_annual_report.pdf p.209",
+        "infosys_fy25_annual_report.pdf p.277"
+      ],
+      "latency_s": 3.1,
+      "answer": "Infosys generated **982.84 metric tonnes** of construction and demolition waste in fiscal 2025 [1][2]. This figure excludes construction and demolition waste from infrastructure development [3][4].\n\nThe FY2025 and FY2026 annual reports both report the same number [1][2]. This is far lower than the 38,340.11 metric tonnes reported for fiscal 2024 [1].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy25_annual_report.pdf p.166",
+        "infosys_fy26_annual_report.pdf p.176",
+        "infosys_fy26_annual_report.pdf p.177",
+        "infosys_fy25_annual_report.pdf p.167"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4401,
+        "output_tokens": 211
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer gives 982.84 metric tonnes, matching the reference, and every additional claim is supported by the passages: both reports show the same figure, the exclusion of infrastructure-development waste is footnoted, and the fiscal 2024 figure of 38,340.11 tonnes appears in passage 1.",
+      "judge_usage": {
+        "input_tokens": 4728,
+        "output_tokens": 127
+      },
+      "faithful": true
+    },
+    {
+      "id": "q16",
+      "type": "table",
+      "question": "What past service cost from gratuity plan amendments did Infosys recognise in FY2026?",
+      "gold_answer": "₹1,088 crore",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.257",
+        "infosys_fy26_annual_report.pdf p.258"
+      ],
+      "gold_rank": 3,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.246",
+        "infosys_fy25_annual_report.pdf p.245",
+        "infosys_fy26_annual_report.pdf p.258",
+        "infosys_fy25_annual_report.pdf p.74",
+        "infosys_fy26_annual_report.pdf p.256",
+        "infosys_fy25_annual_report.pdf p.327",
+        "infosys_fy26_annual_report.pdf p.340",
+        "infosys_fy26_annual_report.pdf p.338",
+        "infosys_fy25_annual_report.pdf p.329",
+        "infosys_fy25_annual_report.pdf p.247"
+      ],
+      "latency_s": 7.6,
+      "answer": "Infosys recognised **₹1,088 crore** under \"Plan amendments\" for its gratuity plan in the year ended March 31, 2026, compared with nil in FY2025 [3]. This raised the gratuity net cost to ₹1,474 crore in FY2026, from ₹295 crore in FY2025, with service cost of ₹397 crore and net interest of ₹(11) crore [3]. There were no plan amendment amounts for the pension plan in either year [3].\n\n**Basis:** The FY2026 table does not say whether it is standalone or consolidated [3]. The comparable FY2025 table is labelled standalone [1].\n\n**Possible link to the Labour Codes:** Separately, Infosys presented an \"incremental amount\" as \"Impact of Labour Codes\" under \"Exceptional Item\" in its Standalone Statement of Profit and Loss for FY2026 [5]. That excerpt does not give the amount or explicitly connect it to the ₹1,088 crore gratuity plan amendment [5].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy26_annual_report.pdf p.258",
+        "infosys_fy25_annual_report.pdf p.246",
+        "infosys_fy26_annual_report.pdf p.256"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4827,
+        "output_tokens": 684
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer states the reference figure of ₹1,088 crore, and all other details (net cost, service cost, net interest, pension nil, basis notes, Labour Codes mention) are supported by passages 1, 3, and 5.",
+      "judge_usage": {
+        "input_tokens": 5356,
+        "output_tokens": 332
+      },
+      "faithful": true
+    },
+    {
+      "id": "q17",
+      "type": "fact",
+      "question": "Which AI governance reporting framework appears among the public policy positions Infosys advocated in FY2026?",
+      "gold_answer": "The Hiroshima AI Process (HAP) Reporting Framework",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.184"
+      ],
+      "gold_rank": 4,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.172",
+        "infosys_fy26_annual_report.pdf p.183",
+        "infosys_fy25_annual_report.pdf p.72",
+        "infosys_fy26_annual_report.pdf p.184",
+        "infosys_fy26_annual_report.pdf p.75",
+        "infosys_fy25_annual_report.pdf p.173",
+        "infosys_fy25_annual_report.pdf p.18",
+        "infosys_fy25_annual_report.pdf p.21",
+        "infosys_fy26_annual_report.pdf p.18",
+        "infosys_fy26_annual_report.pdf p.9"
+      ],
+      "latency_s": 4.4,
+      "answer": "In FY2026, Infosys listed the **Hiroshima AI Process (HAP) Reporting Framework** among the public policy positions it advocated (item 9) [4]. Its method of advocacy was \"Agreement, meetings and expertise sharing\" [4]. The linked Infosys newsroom page refers to trustworthy AI governance [4].\n\nThe extracted table is ambiguous on two columns:\n- **Public domain:** It shows both \"No\" and \"Yes.\" The note explains that consultation events are public, but participation in some events was closed door [4].\n- **Board review frequency:** It shows both \"Annually\" and \"Need by basis\" [4].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy26_annual_report.pdf p.184"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4276,
+        "output_tokens": 363
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly identifies the Hiroshima AI Process (HAP) Reporting Framework as item 9 in the FY2026 table, and its other details (advocacy method, the ambiguous public-domain and board-review columns, and the newsroom link referencing trustworthy AI governance) all match passage 4.",
+      "judge_usage": {
+        "input_tokens": 4695,
+        "output_tokens": 129
+      },
+      "faithful": true
+    },
+    {
+      "id": "q18",
+      "type": "fact",
+      "question": "When did TCS acquire Coastal Cloud?",
+      "gold_answer": "January 14, 2026",
+      "gold_pages": [
+        "tcs_fy26_annual_report.pdf p.178",
+        "tcs_fy26_annual_report.pdf p.233",
+        "tcs_fy26_annual_report.pdf p.264",
+        "tcs_fy26_annual_report.pdf p.317",
+        "tcs_fy26_annual_report.pdf p.322"
+      ],
+      "gold_rank": 2,
+      "retrieved": [
+        "tcs_fy26_annual_report.pdf p.237",
+        "tcs_fy26_annual_report.pdf p.178",
+        "tcs_fy26_annual_report.pdf p.315",
+        "tcs_fy26_annual_report.pdf p.57",
+        "tcs_fy26_annual_report.pdf p.322",
+        "tcs_fy26_annual_report.pdf p.317",
+        "tcs_fy26_annual_report.pdf p.178",
+        "tcs_fy26_annual_report.pdf p.20",
+        "tcs_fy26_annual_report.pdf p.233",
+        "tcs_fy26_annual_report.pdf p.228"
+      ],
+      "latency_s": 5.3,
+      "answer": "TCS acquired Coastal Cloud on **January 14, 2026**, when its wholly owned subsidiary ListEngage Midco, LLC acquired 100% of the ownership interest of Coastal Cloud Holdings, LLC and its subsidiaries for $707 million (₹6,386 crore) [2].\n\nRelated dates in the sources:\n- **January 13, 2026:** The payments to Coastal Cloud's erstwhile shareholders are dated one day earlier. These were $93 million (₹835 crore) via TCS North America Corporation and $606 million (₹5,467 crore) via ListEngage Midco, LLC [1][3].\n- **December 10, 2025:** TCS gave a $25 million (₹226 crore) corporate guarantee on behalf of ListEngage Midco, LLC in connection with the acquisition [1][3].\n- **FY 2026:** The Management Discussion and Analysis places the acquisition in this fiscal year, alongside ListEngage [4].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "tcs_fy26_annual_report.pdf p.178",
+        "tcs_fy26_annual_report.pdf p.237",
+        "tcs_fy26_annual_report.pdf p.315",
+        "tcs_fy26_annual_report.pdf p.57"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4778,
+        "output_tokens": 497
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer gives January 14, 2026, matching the reference, and every supporting detail it adds (the January 13 payments, the December 10, 2025 guarantee and the FY 2026 MD&A mention) is backed by the retrieved passages.",
+      "judge_usage": {
+        "input_tokens": 5307,
+        "output_tokens": 293
+      },
+      "faithful": true
+    },
+    {
+      "id": "q19",
+      "type": "table",
+      "question": "How much did TCS spend on short-term benefits for its key management personnel in FY2026?",
+      "gold_answer": "₹68 crore (₹45 crore in FY2025)",
+      "gold_pages": [
+        "tcs_fy26_annual_report.pdf p.236",
+        "tcs_fy26_annual_report.pdf p.314"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "tcs_fy26_annual_report.pdf p.118",
+        "infosys_fy26_annual_report.pdf p.273",
+        "infosys_fy25_annual_report.pdf p.262",
+        "infosys_fy25_annual_report.pdf p.246",
+        "tcs_q4fy26_earnings_call.pdf p.5",
+        "tcs_fy26_annual_report.pdf p.4",
+        "infosys_fy26_annual_report.pdf p.258",
+        "tcs_fy26_annual_report.pdf p.55",
+        "tcs_fy26_annual_report.pdf p.302",
+        "tcs_fy26_annual_report.pdf p.54"
+      ],
+      "latency_s": 2.5,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4554,
+        "output_tokens": 169
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q20",
+      "type": "fact",
+      "question": "How many branches did ICICI Bank have at the end of FY2025?",
+      "gold_answer": "6,983",
+      "gold_pages": [
+        "icicibank_fy25_integrated_report.pdf p.12",
+        "icicibank_fy25_integrated_report.pdf p.13",
+        "icicibank_fy25_integrated_report.pdf p.25",
+        "icicibank_q4fy25_earnings_call.pdf p.7"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.144",
+        "icicibank_fy25_financial_statements.pdf p.108",
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.198",
+        "icicibank_fy25_financial_statements.pdf p.107",
+        "icicibank_fy25_financial_statements.pdf p.90",
+        "icicibank_fy25_financial_statements.pdf p.132",
+        "icicibank_fy25_financial_statements.pdf p.94",
+        "icicibank_fy25_financial_statements.pdf p.195"
+      ],
+      "latency_s": 1.4,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4893,
+        "output_tokens": 10
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q21",
+      "type": "earnings_call",
+      "question": "According to HDFC Bank's CFO on the Q4 FY25 call, in what range has the bank's yield on assets stayed?",
+      "gold_answer": "Stable at about 8.3%-8.4%",
+      "gold_pages": [
+        "hdfcbank_q4fy25_earnings_call.pdf p.4",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.15"
+      ],
+      "gold_rank": 1,
+      "retrieved": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.15",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.29",
+        "hdfcbank_fy25_annual_report.pdf p.14",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.3",
+        "hdfcbank_fy25_annual_report.pdf p.203",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.23",
+        "hdfcbank_fy25_annual_report.pdf p.51",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.27",
+        "hdfcbank_q4fy25_earnings_call.pdf p.2",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.33"
+      ],
+      "latency_s": 4.0,
+      "answer": "**The sources do not include the Q4 FY25 earnings call transcript or any remarks by HDFC Bank's CFO**, so I can't say what range the CFO described.\n\nHDFC Bank's Q4 FY2025 investor presentation does report a related figure. On a standalone basis, the bank's quarterly yield on assets ranged from **8.3% to 8.4%** from Q3 Dec'23 through Q4 Mar'25 [1]. In the same period, cost of funds (including shareholders' funds) stayed at **4.9%** each quarter [1].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.15"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3343,
+        "output_tokens": 342
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Although the answer notes that the call transcript is not in the sources, it still gives the reference range, standalone yield on assets of 8.3%–8.4%, and every claim is supported by passage 1.",
+      "judge_usage": {
+        "input_tokens": 3736,
+        "output_tokens": 382
+      },
+      "faithful": true
+    },
+    {
+      "id": "q22",
+      "type": "earnings_call",
+      "question": "What cost-to-assets ratio did HDFC Bank's management cite on its Q4 FY25 earnings call?",
+      "gold_answer": "About 1.9%",
+      "gold_pages": [
+        "hdfcbank_q4fy25_earnings_call.pdf p.12"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.3",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.7",
+        "hdfcbank_q4fy25_earnings_call.pdf p.1",
+        "hdfcbank_fy25_annual_report.pdf p.50",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.15",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.25",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.23",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.17",
+        "hdfcbank_fy25_annual_report.pdf p.51",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.33"
+      ],
+      "latency_s": 2.4,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 2636,
+        "output_tokens": 117
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q23",
+      "type": "earnings_call",
+      "question": "How fast did ICICI Bank's mortgage book grow year-on-year in Q4 FY2025?",
+      "gold_answer": "11.0%",
+      "gold_pages": [
+        "icicibank_q4fy25_earnings_call.pdf p.4"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.74",
+        "icicibank_fy25_financial_statements.pdf p.20",
+        "icicibank_fy25_integrated_report.pdf p.1",
+        "icicibank_fy25_financial_statements.pdf p.43",
+        "icicibank_fy25_financial_statements.pdf p.14",
+        "icicibank_q4fy25_earnings_call.pdf p.2",
+        "icicibank_q4fy25_earnings_call.pdf p.10",
+        "icicibank_fy25_financial_statements.pdf p.94",
+        "icicibank_fy25_financial_statements.pdf p.22",
+        "icicibank_fy25_financial_statements.pdf p.12"
+      ],
+      "latency_s": 2.5,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4477,
+        "output_tokens": 108
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q24",
+      "type": "earnings_call",
+      "question": "What was ICICI General's combined ratio for FY2025?",
+      "gold_answer": "102.8% (103.3% in FY2024)",
+      "gold_pages": [
+        "icicibank_q4fy25_earnings_call.pdf p.9"
+      ],
+      "gold_rank": 2,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_q4fy25_earnings_call.pdf p.9",
+        "icicibank_fy25_financial_statements.pdf p.105",
+        "icicibank_fy25_financial_statements.pdf p.90",
+        "icicibank_fy25_financial_statements.pdf p.130",
+        "icicibank_fy25_financial_statements.pdf p.12",
+        "icicibank_fy25_financial_statements.pdf p.198",
+        "icicibank_q4fy25_earnings_call.pdf p.2",
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.133"
+      ],
+      "latency_s": 2.9,
+      "answer": "ICICI General's combined ratio was **102.8% in FY2025**, compared with 103.3% in FY2024 [2]. Excluding catastrophe (CAT) losses of 0.94 billion Rupees in FY2025 and 1.37 billion Rupees in FY2024, the combined ratio was 102.4% and 102.5% respectively [2]. These figures come from ICICI Bank's FY2025 earnings call [2].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "icicibank_q4fy25_earnings_call.pdf p.9"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4601,
+        "output_tokens": 195
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer gives the 102.8% FY2025 combined ratio and the 103.3% FY2024 comparison, matching the reference, and its CAT-adjusted figures and attribution to the earnings call are all supported by passage 2.",
+      "judge_usage": {
+        "input_tokens": 4943,
+        "output_tokens": 103
+      },
+      "faithful": true
+    },
+    {
+      "id": "q25",
+      "type": "earnings_call",
+      "question": "How many large deals did Infosys win in FY25, and what was their total contract value?",
+      "gold_answer": "96 large deals with a TCV of $11.6 bn",
+      "gold_pages": [
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy25_annual_report.pdf p.22",
+        "infosys_q4fy25_earnings_call.pdf p.5"
+      ],
+      "gold_rank": 2,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.217",
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy25_annual_report.pdf p.47",
+        "infosys_fy26_annual_report.pdf p.228",
+        "infosys_fy26_annual_report.pdf p.345",
+        "infosys_fy26_annual_report.pdf p.227",
+        "infosys_q4fy25_earnings_call.pdf p.5",
+        "infosys_fy25_annual_report.pdf p.285",
+        "infosys_fy26_annual_report.pdf p.295",
+        "infosys_fy25_annual_report.pdf p.347"
+      ],
+      "latency_s": 2.9,
+      "answer": "Infosys's large deal total contract value (TCV) for fiscal 2025 was US$11.6 billion, and the company said its \"sustained momentum in large deal wins continues.\" [2]\n\nThe sources do not say how many large deals Infosys won in FY25. The only related count is that Infosys had 85 clients worth US$50 million or more, 2 more than the previous year. [2] That is a count of clients, not of deals won.",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy25_annual_report.pdf p.16"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4787,
+        "output_tokens": 183
+      },
+      "correctness": "partially_correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly gives the $11.6 billion large deal TCV but says the deal count is not in the sources, so it misses the reference figure of 96 large deals; all of its claims are supported by passage 2.",
+      "judge_usage": {
+        "input_tokens": 5127,
+        "output_tokens": 97
+      },
+      "faithful": true
+    },
+    {
+      "id": "q26",
+      "type": "earnings_call",
+      "question": "How many freshers did Infosys say it expects to hire in FY26?",
+      "gold_answer": "Over 20,000 (it hired 15,000 in FY25)",
+      "gold_pages": [
+        "infosys_q4fy25_earnings_call.pdf p.6"
+      ],
+      "gold_rank": 2,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.79",
+        "infosys_q4fy25_earnings_call.pdf p.6",
+        "infosys_fy26_annual_report.pdf p.13",
+        "infosys_fy26_annual_report.pdf p.144",
+        "infosys_fy26_annual_report.pdf p.143",
+        "infosys_fy26_annual_report.pdf p.18",
+        "infosys_fy26_annual_report.pdf p.85",
+        "infosys_fy25_annual_report.pdf p.56",
+        "infosys_fy26_annual_report.pdf p.14",
+        "infosys_fy25_annual_report.pdf p.14"
+      ],
+      "latency_s": 2.8,
+      "answer": "In its FY2025 earnings call, Infosys said it expects to hire **over 20,000 freshers in FY'26** [2]. For comparison, it said it had hired 15,000 freshers in FY'25 [2]. The FY2026 annual report extracts provided do not say how many freshers were actually hired in FY26.",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_q4fy25_earnings_call.pdf p.6"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4840,
+        "output_tokens": 186
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer gives over 20,000 freshers expected in FY26 and 15,000 hired in FY25, both of which match the reference and are supported by passage 2; its statement that the FY26 report extracts do not show actual FY26 hiring is a claim about document absence, which counts as supported.",
+      "judge_usage": {
+        "input_tokens": 5154,
+        "output_tokens": 120
+      },
+      "faithful": true
+    },
+    {
+      "id": "q27",
+      "type": "earnings_call",
+      "question": "What revenue did TCS report for the fourth quarter of FY2026?",
+      "gold_answer": "₹70,698 crore ($7.621 billion)",
+      "gold_pages": [
+        "tcs_q4fy26_earnings_call.pdf p.6"
+      ],
+      "gold_rank": null,
+      "retrieved": [
+        "tcs_fy26_annual_report.pdf p.4",
+        "tcs_q4fy26_earnings_call.pdf p.5",
+        "tcs_q4fy26_earnings_call.pdf p.2",
+        "infosys_fy25_annual_report.pdf p.277",
+        "infosys_fy25_annual_report.pdf p.197",
+        "tcs_fy26_annual_report.pdf p.46",
+        "tcs_fy26_annual_report.pdf p.54",
+        "infosys_fy26_annual_report.pdf p.209",
+        "infosys_fy25_annual_report.pdf p.50",
+        "tcs_fy26_annual_report.pdf p.258"
+      ],
+      "latency_s": 4.2,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3776,
+        "output_tokens": 216
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q28",
+      "type": "earnings_call",
+      "question": "How many TCS employees have advanced AI and machine learning skills?",
+      "gold_answer": "Over 270,000",
+      "gold_pages": [
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.25",
+        "tcs_fy26_annual_report.pdf p.55",
+        "tcs_fy26_annual_report.pdf p.9",
+        "tcs_q4fy26_earnings_call.pdf p.14"
+      ],
+      "gold_rank": 1,
+      "retrieved": [
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_q4fy26_earnings_call.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.25",
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.13",
+        "tcs_fy26_annual_report.pdf p.25",
+        "tcs_fy26_annual_report.pdf p.13",
+        "tcs_fy26_annual_report.pdf p.12",
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.9"
+      ],
+      "latency_s": 3.9,
+      "answer": "**Over 270,000 TCS associates** have advanced proficiencies in AI and machine learning in FY2026.[1][2] The annual report calls these \"higher-order AI/ML skills\" and dates the figure to March 31, 2026, while the talent development section describes them as \"Higher Order AI/ML/GenAI skills acquired.\"[4][3] It says this was supported by 69 million learning hours and 186,000 external certifications.[4] Separately, 100% of sales and pre-sales employees were trained in AI.[3][4]",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_q4fy26_earnings_call.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.14",
+        "tcs_fy26_annual_report.pdf p.25"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4657,
+        "output_tokens": 259
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer states the reference figure of over 270,000, and every supporting detail appears in the retrieved passages: the March 31, 2026 date, 69 million learning hours, 186,000 certifications and 100% of sales staff trained in AI.",
+      "judge_usage": {
+        "input_tokens": 5030,
+        "output_tokens": 274
+      },
+      "faithful": true
+    },
+    {
+      "id": "q29",
+      "type": "cross_year",
+      "question": "How much did Infosys's consolidated revenue grow from FY2025 to FY2026?",
+      "gold_answer": "From ₹1,62,990 crore to ₹1,78,650 crore, up 9.6%",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.287",
+        "infosys_fy26_annual_report.pdf p.33",
+        "infosys_fy26_annual_report.pdf p.333",
+        "infosys_fy26_annual_report.pdf p.334",
+        "infosys_fy26_annual_report.pdf p.356",
+        "infosys_fy26_annual_report.pdf p.77",
+        "infosys_fy26_annual_report.pdf p.80"
+      ],
+      "gold_rank": 10,
+      "retrieved": [
+        "infosys_q4fy25_earnings_call.pdf p.5",
+        "infosys_fy25_annual_report.pdf p.286",
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.78",
+        "infosys_fy25_annual_report.pdf p.47",
+        "infosys_fy25_annual_report.pdf p.277",
+        "infosys_fy25_annual_report.pdf p.347",
+        "infosys_fy25_annual_report.pdf p.31",
+        "infosys_fy26_annual_report.pdf p.209",
+        "infosys_fy26_annual_report.pdf p.33"
+      ],
+      "latency_s": 5.1,
+      "answer": "**The sources don't give Infosys's FY2026 consolidated revenue, so the growth from FY2025 to FY2026 can't be calculated.**\n\nWhat the sources do show:\n- **FY2025 revenue:** Infosys reported revenues of ₹1,62,990 cr, up 6.1% year-on-year (4.2% in constant currency) [3].\n- **FY2026 expenses:** The FY2026 annual report gives consolidated operating expenses, excluding finance cost, of ₹1,41,272 crore (79.1% of revenue) in fiscal 2026, compared with ₹1,28,566 crore (78.9% of revenue) in fiscal 2025 [4].\n- **FY2026 revenue mix:** For the year ended March 31, 2026, about 97.1% of consolidated revenue came from exports and 2.9% from domestic sales [4].\n\nThe FY2026 revenue figure itself is not in the extract.",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.78"
+      ],
+      "cites_gold": false,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4792,
+        "output_tokens": 462
+      },
+      "correctness": "incorrect",
+      "unsupported_claims": [],
+      "reason": "The system answer says FY2026 revenue and growth cannot be determined, failing to give the reference's ₹1,78,650 crore and 9.6% growth, although its cited facts are supported by the passages.",
+      "judge_usage": {
+        "input_tokens": 5320,
+        "output_tokens": 266
+      },
+      "faithful": true
+    },
+    {
+      "id": "q30",
+      "type": "cross_year",
+      "question": "How did Infosys's total dividend per share for FY2026 compare with FY2025?",
+      "gold_answer": "₹48 per share for FY2026 (₹23 interim + ₹25 final) versus ₹43 for FY2025",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.38"
+      ],
+      "gold_rank": 1,
+      "retrieved": [
+        "infosys_fy26_annual_report.pdf p.38",
+        "infosys_fy25_annual_report.pdf p.36",
+        "infosys_fy25_annual_report.pdf p.111",
+        "infosys_fy26_annual_report.pdf p.119",
+        "infosys_fy25_annual_report.pdf p.311",
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy25_annual_report.pdf p.18",
+        "infosys_fy25_annual_report.pdf p.24",
+        "infosys_fy25_annual_report.pdf p.286",
+        "infosys_fy25_annual_report.pdf p.34"
+      ],
+      "latency_s": 6.7,
+      "answer": "Infosys's total dividend per share was **₹48.00 for fiscal 2026**, up from **₹43.00 for fiscal 2025** [1][4]. That is ₹5.00 higher.\n\n| Component | Fiscal 2026 | Fiscal 2025 |\n|---|---|---|\n| Interim dividend | ₹23.00 [1][4] | ₹21.00 [1][2][3] |\n| Final dividend | ₹25.00 [1][4] | ₹22.00 [1][2][3] |\n| **Total** | **₹48.00** [1][4] | **₹43.00** [1][2][3] |\n\n**Caveat:** The fiscal 2026 final dividend of ₹25.00 was recommended by the Board on April 23, 2026. It still needs shareholder approval at the AGM on June 23, 2026, with payment due on June 25, 2026 [1].\n\n**Buyback and payout ratio:** Fiscal 2026 also included a buyback of ₹18,000 crore at ₹1,800 per share [1]. This raised the payout ratio (buyback plus interim and final dividend, as a percentage of free cash flow under IFRS) to 113.9%, compared with 51.6% for fiscal 2025 [1].",
+      "not_found": false,
+      "warnings": [
+        "2 sentence(s) state figures without a citation."
+      ],
+      "cited_pages": [
+        "infosys_fy26_annual_report.pdf p.38",
+        "infosys_fy26_annual_report.pdf p.119",
+        "infosys_fy25_annual_report.pdf p.36",
+        "infosys_fy25_annual_report.pdf p.111"
+      ],
+      "cites_gold": true,
+      "figures_grounded": false,
+      "usage": {
+        "input_tokens": 4748,
+        "output_tokens": 675
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly states ₹48 for FY2026 (₹23 interim plus ₹25 final) versus ₹43 for FY2025, matching the reference, and all extra details on approval dates, the buyback and payout ratios are supported by passage 1.",
+      "judge_usage": {
+        "input_tokens": 5386,
+        "output_tokens": 333
+      },
+      "faithful": true
+    },
+    {
+      "id": "q31",
+      "type": "cross_year",
+      "question": "How did Infosys's construction and demolition waste change between fiscal 2025 and fiscal 2026?",
+      "gold_answer": "It rose from 982.84 to 3,763.47 metric tonnes",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.176"
+      ],
+      "gold_rank": 3,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.166",
+        "infosys_fy26_annual_report.pdf p.177",
+        "infosys_fy26_annual_report.pdf p.176",
+        "infosys_fy25_annual_report.pdf p.167",
+        "infosys_fy26_annual_report.pdf p.220",
+        "infosys_fy25_annual_report.pdf p.214",
+        "infosys_fy26_annual_report.pdf p.69",
+        "infosys_fy26_annual_report.pdf p.330",
+        "infosys_fy26_annual_report.pdf p.251",
+        "infosys_fy25_annual_report.pdf p.208"
+      ],
+      "latency_s": 4.8,
+      "answer": "Infosys's construction and demolition waste **rose from 982.84 metric tonnes in fiscal 2025 to 3,763.47 metric tonnes in fiscal 2026** [3]. Both annual reports give the same fiscal 2025 figure [1][3].\n\nBoth reports note that this category excludes construction and demolition waste from infrastructure development [2][4]. The sources do not explain why the figure increased.",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy26_annual_report.pdf p.176",
+        "infosys_fy25_annual_report.pdf p.166",
+        "infosys_fy26_annual_report.pdf p.177",
+        "infosys_fy25_annual_report.pdf p.167"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4587,
+        "output_tokens": 334
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer matches the reference figures (982.84 to 3,763.47 metric tonnes), and every additional claim, including the matching FY25 figure in both reports and the infrastructure-development exclusion footnote, is supported by the passages.",
+      "judge_usage": {
+        "input_tokens": 4932,
+        "output_tokens": 104
+      },
+      "faithful": true
+    },
+    {
+      "id": "q32",
+      "type": "cross_year",
+      "question": "How did Infosys's gratuity service cost change from FY2025 to FY2026?",
+      "gold_answer": "₹305 crore in FY2025 to ₹397 crore in FY2026",
+      "gold_pages": [
+        "infosys_fy26_annual_report.pdf p.258"
+      ],
+      "gold_rank": 5,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.246",
+        "infosys_fy25_annual_report.pdf p.245",
+        "infosys_fy25_annual_report.pdf p.74",
+        "infosys_fy25_annual_report.pdf p.327",
+        "infosys_fy26_annual_report.pdf p.258",
+        "infosys_fy25_annual_report.pdf p.329",
+        "infosys_fy26_annual_report.pdf p.51",
+        "infosys_fy26_annual_report.pdf p.338",
+        "infosys_fy26_annual_report.pdf p.256",
+        "infosys_fy26_annual_report.pdf p.340"
+      ],
+      "latency_s": 5.7,
+      "answer": "Infosys's gratuity service cost rose from ₹305 crore in the year ended March 31, 2025 to ₹397 crore in the year ended March 31, 2026 [5]. The FY2025 figure of ₹305 crore matches the FY2024-25 annual report, where it is shown on a standalone basis [1]. The FY2026 source does not state whether its figures are standalone or consolidated [5].\n\nTotal gratuity net cost rose more sharply, from ₹295 crore in FY2025 to ₹1,474 crore in FY2026 [5]. Most of that increase came from a ₹1,088 crore plan amendment charge in FY2026, compared with none in FY2025 [5].",
+      "not_found": false,
+      "warnings": [],
+      "cited_pages": [
+        "infosys_fy26_annual_report.pdf p.258",
+        "infosys_fy25_annual_report.pdf p.246"
+      ],
+      "cites_gold": true,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4770,
+        "output_tokens": 429
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "The answer correctly states the gratuity service cost rose from ₹305 crore in FY2025 to ₹397 crore in FY2026, and its additional details on net cost and the plan amendment charge are all supported by the passages.",
+      "judge_usage": {
+        "input_tokens": 5210,
+        "output_tokens": 263
+      },
+      "faithful": true
+    },
+    {
+      "id": "q33",
+      "type": "unanswerable",
+      "question": "What was Wipro's revenue in FY2025?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "infosys_fy25_annual_report.pdf p.56",
+        "tcs_fy26_annual_report.pdf p.46",
+        "tcs_q4fy26_earnings_call.pdf p.5",
+        "infosys_fy26_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.254",
+        "infosys_fy25_annual_report.pdf p.50",
+        "infosys_fy25_annual_report.pdf p.45",
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.51",
+        "infosys_fy25_annual_report.pdf p.48"
+      ],
+      "latency_s": 2.3,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4491,
+        "output_tokens": 65
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q34",
+      "type": "unanswerable",
+      "question": "What was Kotak Mahindra Bank's CASA ratio at March 31, 2025?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.210",
+        "hdfcbank_fy25_annual_report.pdf p.368",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.10",
+        "hdfcbank_fy25_annual_report.pdf p.351",
+        "hdfcbank_fy25_annual_report.pdf p.348",
+        "infosys_fy25_annual_report.pdf p.229",
+        "icicibank_fy25_integrated_report.pdf p.2",
+        "icicibank_q4fy25_earnings_call.pdf p.3",
+        "icicibank_fy25_financial_statements.pdf p.39",
+        "hdfcbank_fy25_annual_report.pdf p.210"
+      ],
+      "latency_s": 1.9,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 2824,
+        "output_tokens": 46
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q35",
+      "type": "unanswerable",
+      "question": "What net interest margin did ICICI Bank report for the quarter ended June 30, 2025?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "icicibank_fy25_financial_statements.pdf p.50",
+        "icicibank_fy25_financial_statements.pdf p.184",
+        "icicibank_fy25_financial_statements.pdf p.186",
+        "icicibank_fy25_financial_statements.pdf p.166",
+        "icicibank_fy25_financial_statements.pdf p.129",
+        "icicibank_fy25_financial_statements.pdf p.14",
+        "icicibank_fy25_financial_statements.pdf p.182",
+        "icicibank_fy25_financial_statements.pdf p.132",
+        "icicibank_fy25_financial_statements.pdf p.94",
+        "icicibank_fy25_financial_statements.pdf p.19"
+      ],
+      "latency_s": 1.5,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4738,
+        "output_tokens": 10
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q36",
+      "type": "unanswerable",
+      "question": "What revenue growth guidance has Infosys given for FY2027?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "infosys_q4fy25_earnings_call.pdf p.4",
+        "infosys_fy25_annual_report.pdf p.74",
+        "infosys_fy25_annual_report.pdf p.72",
+        "infosys_fy26_annual_report.pdf p.75",
+        "infosys_q4fy25_earnings_call.pdf p.5",
+        "infosys_fy25_annual_report.pdf p.286",
+        "infosys_fy25_annual_report.pdf p.16",
+        "infosys_fy26_annual_report.pdf p.39",
+        "infosys_fy25_annual_report.pdf p.37",
+        "infosys_fy25_annual_report.pdf p.47"
+      ],
+      "latency_s": 3.6,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 4666,
+        "output_tokens": 180
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q37",
+      "type": "unanswerable",
+      "question": "How many employees did HDFC Bank lay off in FY2025?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_fy25_annual_report.pdf p.300",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.32",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.27",
+        "hdfcbank_fy25_annual_report.pdf p.271",
+        "hdfcbank_fy25_annual_report.pdf p.525",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.23",
+        "hdfcbank_fy25_annual_report.pdf p.455",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.33",
+        "hdfcbank_fy25_annual_report.pdf p.249",
+        "hdfcbank_fy25_annual_report.pdf p.50"
+      ],
+      "latency_s": 1.8,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 3147,
+        "output_tokens": 71
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    },
+    {
+      "id": "q38",
+      "type": "unanswerable",
+      "question": "What was HDFC Bank's net profit for FY2026?",
+      "gold_answer": "",
+      "gold_pages": [],
+      "gold_rank": null,
+      "retrieved": [
+        "hdfcbank_q4fy25_investor_presentation.pdf p.32",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.33",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.13",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.21",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.23",
+        "hdfcbank_fy25_annual_report.pdf p.5",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.27",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.4",
+        "hdfcbank_fy25_annual_report.pdf p.203",
+        "hdfcbank_q4fy25_investor_presentation.pdf p.14"
+      ],
+      "latency_s": 2.2,
+      "answer": "Not found in the documents.",
+      "not_found": true,
+      "warnings": [],
+      "cited_pages": [],
+      "cites_gold": null,
+      "figures_grounded": true,
+      "usage": {
+        "input_tokens": 2305,
+        "output_tokens": 91
+      },
+      "correctness": "correct",
+      "unsupported_claims": [],
+      "reason": "Exact 'not found' reply.",
+      "faithful": true
+    }
+  ]
+}

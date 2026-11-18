@@ -1,0 +1,2 @@
+timestamp,label,embedding_model,chunk_size,chunk_overlap,top_k,n_chunks,llm_model,llm_effort,judge_model,n,n_answerable,hit@1,hit@3,hit@5,hit@10,mrr@10,correct,correct_or_partial,faithful,figures_grounded,cites_gold,unanswerable_declined,answers_with_warnings
+20261027-114435,baseline,BAAI/bge-small-en-v1.5,500,75,5,3935,claude-opus-5-5,medium,claude-opus-5-5,38,32,15.6,40.6,53.1,65.6,0.31,53.1,56.2,95.5,95.5,77.3,100.0,5.3

@@ -1,0 +1,10 @@
+# Keep secrets, the local venv and source PDFs out of the image.
+.env
+.venv/
+data/raw/
+data/processed/pages.jsonl
+tests/
+deploy/
+**/__pycache__/
+.pytest_cache/
+pytest-cache-files-*/

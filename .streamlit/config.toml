@@ -1,0 +1,7 @@
+[server]
+# The file watcher walks every imported module; transformers' lazy modules make it log
+# torchvision ImportErrors on every rerun. Restart the app after code changes instead.
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

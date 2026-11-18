@@ -1,0 +1,30 @@
+# Baseline (Phases 1-4), pinned to the versions the index was built and tested with.
+# Later-phase deps (rank_bm25, pdfplumber, ragas) get added when we reach them.
+
+# CPU-only torch (needed by sentence-transformers). The default Linux wheel on PyPI bundles
+# CUDA, gigabytes that Streamlit Cloud and other CPU hosts can't use.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+
+# PDF -> page-level text. Fast, keeps page numbers, no system deps.
+pymupdf==2.0
+
+# Embeddings (bge-small-en-v1.5). Also gives us the model's tokenizer for token-based chunking.
+sentence-transformers==6.2.0
+# Imported directly for the tokenizer used in chunking (installed by sentence-transformers too).
+transformers==5.20.2
+
+# Vector index. Plain library, no server; metadata lives next to it in a JSONL file.
+faiss-cpu==1.15.1
+
+# LLM for answer generation.
+anthropic==2.3.0
+
+# UI
+streamlit==1.66.1
+
+# Loads ANTHROPIC_API_KEY etc. from .env
+python-dotenv==1.2.4
+
+# Tests
+pytest==9.1.1

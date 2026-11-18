@@ -1,0 +1,3 @@
+# Store the prebuilt index byte-for-byte. index_meta.json records a SHA-256 of chunks.jsonl,
+# so a line-ending conversion would make the deployed app reject the index as stale.
+data/processed/* -text
